@@ -1,0 +1,75 @@
+{% extends 'crm/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<body>
+<html>
+{% if user.is_authenticated %}
+<div class="page-container">
+
+    <h2 class="top-menu">Maverick hospitality.</h2>
+    <div class="col-sm-36">
+        <div class="card bg-light p-3">
+            <p class="mb-0">
+                Maverick Food Pantry aims to contribute to UNO’s culture of caring
+                by providing resources to those in immediate need and connecting them
+                with additional resources in the greater Omaha area for long-term support.</p>
+                 <p>      choose the services from below. </p>
+
+        </div>
+    </div>
+</div>
+</div>
+{% endif %}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="links">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="{% static "images/customer.jpeg" %}" alt="customer"/>
+                            <div class="caption">
+                                <h2>Customer</h2>
+                                <p>We see our success in our customers success </p>
+                                <p><a class="btn btn-primary" href="{% url 'crm:customer_list' %}"
+                                      role="button">View
+                                    details &raquo;</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="{% static "images/cupcakes.jpg" %}" alt="cupcakes"/>
+                            <div class="caption">
+                                <h2>Services</h2>
+                                <p>Great Services</p>
+                                <p><a class="btn btn-primary" href="{% url 'crm:service_list' %}"
+                                      role="button">View
+                                    details &raquo;</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="{% static "images/lunch.jpg" %}" alt="lunch"/>
+                            <div class="caption">
+                                <h2>Products</h2>
+                                <p>Great Products.</p>
+                                <p><a class="btn btn-primary" href="{% url 'crm:product_list' %}"
+                                      role="button">View
+                                    details &raquo;</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
